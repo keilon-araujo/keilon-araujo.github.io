@@ -4,6 +4,11 @@ title:  "IPv4"
 date:   2020-05-14 02:03:36 +0530
 categories: IP
 ---
+
+---
+O protocolo IPv4 possui 32 bits de largura (de 0 a 31). Como cada byte tem 8 bits, podemos dizer que o cabeçalho IPv4 possui 4 bytes de largura, e cada espaço existente em cada linha no cabeçalho deverá receber um algarismo binário.
+---
+
 # Análise de Tráfego em Redes TCP/IP
 
 ## Cabeçalho IPv4
@@ -25,9 +30,7 @@ categories: IP
 |              Options                           | Padding       |
 | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -|
 ~~~
----
-O protocolo IPv4 possui 32 bits de largura (de 0 a 31). Como cada byte tem 8 bits, podemos dizer que o cabeçalho IPv4 possui 4 bytes de largura, e cada espaço existente em cada linha no cabeçalho deverá receber um algarismo binário.
----
+
 
 * **Campo Version**
 
