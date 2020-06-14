@@ -60,14 +60,16 @@ O protocolo IPv4 possui 32 bits de largura (de 0 a 31). Como cada byte tem 8 bit
 * **Campo Flag:**
   Como dito anteriormente a segunda linha do cabeçalho IPv4 é destinada a controlar a fragmengação, o campo `flags` é responsável por ajudar a controlar o fluxo de fragmentos IP, quando ocorre a fragmentação. Quando fragmentados, os pacotes possuem o mesmo cabeçalho e por consequencia o mesmo número de identificação (`Identification`), daí surge a próxima medida de controle: as `flags`. Flag é um campo que possui 3 bits, e são eles:
 
- 	0| 1| 2|
-	|:---:|:---:|:---:|
-	|none|DF|MF|
+
+0| 1| 2|
+|:---:|:---:|:---:|
+|none|DF|MF|
 
 
-	- `none`: esse bit é reservado para uso futuro e, por enquanto, sempre terá valor zero.
-	- `DF`  : Significa Don't Fragment. Esse bit é utilizado para expressar se poderá ou não haver fragmentação do pacote IP. Caso o bit seja marcado com valor 1, o pacote não poderá sofrer fragmentação por roteadores que estejam no caminho. Assim, se o pacote for maior do que capacidade de um determinado roteador, este enviará uma solicitação de retransmissão em partes menores. Tal solicitação será feita pelo protocolo ICMP. Caso o bit `DF` esteja marcado como 0, os roteadores existentes no caminho poderão realizar a quebra do pacote, então os valores possíveis são 0 (pode fragmentar) e 1 (não pode fragmentar).
-	- `MF`  : Significa More Fragment. Caso seja necessário fragmentar um pacote, o bit MF indicará, no destino, a cada fragmento recebido, se haverá mais fragmentos que chegarão ou não. O bit 1 representa mais fragmentos. Exemplo: ao dividir um pacote em 3 partes, as duas primeiras terão o bit MF marcado com 1, enquanto a última será marcada com MF 0.
+
+- `none`: esse bit é reservado para uso futuro e, por enquanto, sempre terá valor zero.
+- `DF`  : Significa Don't Fragment. Esse bit é utilizado para expressar se poderá ou não haver fragmentação do pacote IP. Caso o bit seja marcado com valor 1, o pacote não poderá sofrer fragmentação por roteadores que estejam no caminho. Assim, se o pacote for maior do que capacidade de um determinado roteador, este enviará uma solicitação de retransmissão em partes menores. Tal solicitação será feita pelo protocolo ICMP. Caso o bit `DF` esteja marcado como 0, os roteadores existentes no caminho poderão realizar a quebra do pacote, então os valores possíveis são 0 (pode fragmentar) e 1 (não pode fragmentar).
+- `MF`  : Significa More Fragment. Caso seja necessário fragmentar um pacote, o bit MF indicará, no destino, a cada fragmento recebido, se haverá mais fragmentos que chegarão ou não. O bit 1 representa mais fragmentos. Exemplo: ao dividir um pacote em 3 partes, as duas primeiras terão o bit MF marcado com 1, enquanto a última será marcada com MF 0.
 
 > A flag `MF` só poderá receber o bit 1 se  `DF` for igual a 0.
 
@@ -272,10 +274,3 @@ O campo `Protocol` possui 8 bits, e por isso admite valores de 0 a 255, o protoc
 	O protocolo IP sempre terá outro protocolo em seu payload. A todos os protocolos que podem ser transportados pelo IP damos o nome de `Protocolos IP`.
 
 ---
-
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
