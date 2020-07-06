@@ -7,6 +7,7 @@ categories: CISCO VPN LINUX VPNC
 
 ---
 Este procedimento é necessário quando, temos um arquivo .pcf que é usado para conectar em uma VPN Cisco via Client do Windows e precisamos conectar em SO Linux ou Unix-like e não sabemos a chave pré-compartilhada.
+
 ---
 
 Vamos ao primeiro passo:
