@@ -1,6 +1,6 @@
 title: TechFull
 author: Keilon Araujo
-email: your-email@domain.com
+email: keilon.araujo@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   Blog de Tecnologia e Infraestrutura
 show_excerpts: true # set to true to show excerpts on the homepage
@@ -11,7 +11,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Keilon Araujo
-  tagline: Estudante de Redes de Computadores
+  tagline: Estudante de Redes de Computadores 
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
@@ -26,11 +26,11 @@ plainwhite:
     # dribbble: jekyll
     # flickr:   jekyll
     # instagram: jekyll
-    pinterest: https://github.com/keilon-araujo/curriculo/blob/master/CV-Keilon%20Araujo.pdf
+    # pinterest: https://github.com/keilon-araujo/curriculo/blob/master/CV-Keilon%20Araujo.pdf
     # youtube: jekyll
     # facebook: jekyll
     # soundcloud: jekyll
-    # telegram: jekyll
+    telegram: @keilon_araujo
 
     # Mastodon instances
     # mastodon:
