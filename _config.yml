@@ -11,7 +11,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Keilon Araujo
-  tagline: Pai da Júlia e nas horas vagas estudante de redes de computadores e entusiasta Linux e Unix-like. Aficionado por tecnologias e saber como elas funcionam (approach bottom to up). 
+  tagline: Pai da Júlia e nas horas vagas estudante de redes de computadores e entusiasta Linux e Unix-like. 
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
