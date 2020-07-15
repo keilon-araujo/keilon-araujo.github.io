@@ -16,3 +16,7 @@ categories: L2 Linux Disponibilidade Redes
 O Link Aggregation está descrito na norma IEEE 802.3ad, e possibilita vincular dois um mais links ethernet através de um único link virtual. 
 
 Esta funcionalidade nos permite prover alta disponibilidade para rescursos importantes em uma rede, neste exemplo será usado um servidor Linux com duas interfaces Ethernet e um módulo que está no kernel chamado `bonding`. 
+
+![lag](https://raw.githubusercontent.com/keilon-araujo/teste/master/lag.png)
+
+
