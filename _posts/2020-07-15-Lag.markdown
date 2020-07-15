@@ -22,7 +22,7 @@ Esta funcionalidade nos permite prover alta disponibilidade para rescursos impor
 O módulo bonding tem 7 modos de operação e cada oferece recursos diferentes. Neste cenário vamos usar `Mode=0 (balance round-robin)` o qual provê tolerancia à falhas dos links e também faz o balanceamento de cargas. Outros parametros também podem ser utilizados, como o `miimom` que define o tempo de espera para monitoramento da interface bounding, `downdelay` que define o tempo de espera para desabilitar uma interface escrava em caso de falha e deve ser usada em conjunto com miimom e também o parametro `updelay` o qual define o tempo de espera para ativar uma interface escrava após detecção de normalização do link principal.
 
 
-Para configuração vamos utilizar duas interfaces físicas sendo elas enp1s0 e enp7s0 como escravas e criaremos uma interface virtual `bond0` no modo `active-backup`:
+Para configuração vamos utilizar duas interfaces físicas sendo elas `enp1s0` e `enp7s0` como escravas e criaremos uma interface virtual `bond0` no modo `round-robin`:
 ~~~
 miimom=100    -> o link será monitorado a cada 100 ms
 downdelay=200 -> a interface só será desabilitada em caso de falha após 200 ms
