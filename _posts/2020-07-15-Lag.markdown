@@ -19,12 +19,8 @@ Esta funcionalidade nos permite prover alta disponibilidade para rescursos impor
 
 ![lag](https://raw.githubusercontent.com/keilon-araujo/teste/master/lag.png)
 
-O módulo bonding tem 7 modos de operação e cada oferece recursos diferentes. Neste cenário vamos usar `Mode=0 (active-backup)` o qual provê tolerancia à falhas. Os pacotes são enviados e recebidos por meio da interface escrava ativa, a outra interface só será utiliada caso a primeira falhar. Outros parametros também podem ser utilizados, como o `miimom` que define o tempo de espera para monitoramento da interface bounding, `downdelay` que define o tempo de espera para desabilitar uma interface escrava em caso de falha e deve ser usada em conjunto com miimom e também o parametro `updelay` o qual define o tempo de espera para ativar uma interface escrava após detecção de normalização do link principal.
+O módulo bonding tem 7 modos de operação e cada oferece recursos diferentes. Neste cenário vamos usar `Mode=0 (balance round-robin)` o qual provê tolerancia à falhas dos links e também faz o balanceamento de cargas. Outros parametros também podem ser utilizados, como o `miimom` que define o tempo de espera para monitoramento da interface bounding, `downdelay` que define o tempo de espera para desabilitar uma interface escrava em caso de falha e deve ser usada em conjunto com miimom e também o parametro `updelay` o qual define o tempo de espera para ativar uma interface escrava após detecção de normalização do link principal.
 
->Em outros modos de operação o bonding permite deixar as duas interfaces ativas fazendo balanceamento de carga.
-
-
-**Configuração do Bonding no Debian Buster**
 
 Para configuração vamos utilizar duas interfaces físicas sendo elas enp1s0 e enp7s0 como escravas e criaremos uma interface virtual `bond0` no modo `active-backup`:
 ~~~
@@ -52,4 +48,38 @@ root@server~# lsmod | grep bonding
 bonding               180224  0
 ~~~
 
+O próximo passo é configurar as interfaces, aqui será criado o link virtual `bond0` e as interfaces que farão parte do Link Aggregation serão declaradas dentro desta. No Debian Buster todas interfaces são configuradas em um único arquivo que fica em `/etc/network/interfaces`.
 
+~~~shell
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+#allow-hotplug enp1s0
+#iface enp1s0 inet dhcp
+#
+
+# Interface bonding
+# Static IP address
+auto bond0
+iface bond0 inet static
+        bond-slaves enp1s0 enp7s0
+        bond-mode  balance-rr
+        bond-miimon 100
+	bond-updelay 220
+	bond-downdelay 220
+        bond-primary enp1s0 enp7s0
+
+        address 192.168.122.188
+        netmask 255.255.255.0
+        network 192.168.122.0
+        broadcast 192.168.122.255
+        gateway 192.168.122.1
+
+~~~
