@@ -2,7 +2,7 @@
 layout: post
 title:  "Link Aggregation - Ethernet Bonding"
 date:   2020-07-15 13:03:36 +0530
-categories: L2 Linux Disponibilidade
+categories: L2 Linux `Alta Disponibilidade`
 ---
 
 ---
