@@ -27,11 +27,11 @@ O módulo bonding tem 7 modos de operação e cada oferece recursos diferentes. 
 **Configuração do Bonding no Debian Buster**
 
 Para configuração vamos utilizar duas interfaces físicas sendo elas enp1s0 e enp7s0 como escravas e criaremos uma interface virtual `bond0` no modo `active-backup`:
-```shell
+~~~
 miimom=100    -> o link será monitorado a cada 100 milisegundos
 downdelay=200 -> a interface ativada só será desabilitada em caso de falha após 200 milisegundos
 updelay=220   -> tempo que o link principal irá retomar após falha
-```
+~~~
 
 O Debian Buster temos que instalar o `ifenslave` que irá ativar/desativar as interfaces, como usuário root vamos às configurações:
 
