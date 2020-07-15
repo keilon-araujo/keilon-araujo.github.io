@@ -2,7 +2,7 @@
 layout: post
 title:  "Link Aggregation - Ethernet Bonding"
 date:   2020-07-15 13:03:36 +0530
-categories: L2 Linux Disponibilidade Redes
+categories: L2 Linux Disponibilidade Redes Bonding
 ---
 
 ---
@@ -18,5 +18,10 @@ O Link Aggregation está descrito na norma IEEE 802.3ad, e possibilita vincular 
 Esta funcionalidade nos permite prover alta disponibilidade para rescursos importantes em uma rede, neste exemplo será usado um servidor Linux com duas interfaces Ethernet e um módulo que está no kernel chamado `bonding`. 
 
 ![lag](https://raw.githubusercontent.com/keilon-araujo/teste/master/lag.png)
+
+O módulo bonding tem 7 modos de operação e cada oferece recursos diferentes. Neste cenário vamos usar `Mode=0 (active-backup)` o qual provê tolerancia a falhas, os pacotes são enviados e recebidos por meio da interface escraca ativada, a outra interface só será utiliada caso a primeira falhar. Outros parametros também podem ser utilizados, como o `miimom` que define o tempo de espera para monitoramento da interface bounding, `downdelay` que define o tempo de espera para desabilitar uma interface escrava em caso de falha e deve ser usada em conjunto com miimom e também o parametro `updelay` o qual define o tempo de espera para ativar uma interface escrava após detecção de normalização do link principal.
+
+> Em outros modos de operação o bonding permite deixar as duas interfaces ativas fazendo balanceamento de carga.
+
 
 
