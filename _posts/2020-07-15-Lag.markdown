@@ -4,7 +4,7 @@ title:  "Link Aggregation - Ethernet Bonding"
 date:   2020-07-15 13:03:36 +0530
 categories: L2 Linux Disponibilidade
 ---
-   
+
 ---
  Neste post tentarei explicar como funciona o Link Aggregation, que é bastante comum em Uplinks entre switches e routers mas que também pode ser aplicado em host, em nosso caso aplicaremos em um servidor GNU/Linux Debian Buster. 
 ---
