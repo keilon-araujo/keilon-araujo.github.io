@@ -45,9 +45,9 @@ Agora é necessário um cliente para conectar ao dispositivos, as opções são 
 
 Para conectar vamos usar o comando `cu -l /dev/ttyUSB0 -s 9600`, onde a opção `-l` nos permite apontar o dispositvo USB e a opção `-s` permiteinformar o baud rate(taxa de transmissão), para dispositivos Cisco o padrão é 9600, em dispositivos Nokia por exemplo, esse valor é 155200.
 
-![cu](https://github.com/keilon-araujo/posts/blob/master/cu-1.png)
+![cu](https://raw.githubusercontent.com/keilon-araujo/posts/master/cu-1.png)
 
 Para encerrar a sessão é simples, ainda com a sessão aberta no terminal basta digitar o comando `~.` que a sessão será encerrada.
 
-![close](https://github.com/keilon-araujo/posts/blob/master/close-1.png)
+![close](https://raw.githubusercontent.com/keilon-araujo/posts/master/close-1.png)
 
