@@ -7,6 +7,7 @@ categories:  Linux USB Serial Redes Cisco
 
 ---
  Neste post farei uma breve explicação de como se conectar à dispositivos de rede via cabo USB-Serial, usado em vários dispositivos de Rede como roteadores e Switches.
+
 ---
 
 **Como usar USB-Serial no linux para conexão em via Terminal**
