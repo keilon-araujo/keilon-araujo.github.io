@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Conexão USB-Serial via Terminal no Linux"
-date:   2020-08-29 143:03:36 +0530
+date:   2020-08-29 14:03:36 +0530
 categories:  Linux USB Serial Redes Cisco
 ---
 
