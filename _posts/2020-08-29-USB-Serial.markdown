@@ -10,6 +10,7 @@ categories:  Linux USB Serial Redes Cisco
 
 ---
 
+
 **Como usar USB-Serial no linux para conexão em via Terminal**
 
 A maioria dos dispositivos de Rede oferecem a conexão serial-usb como interface de manutenção e configuração, apesar de muitos já oferecerem uma interface gráfica, muitos administradores ainda preferem estar conectados via terminal, no caso do Windows basta instalar o drive do adaptador USB e conectar via cliente porém no Linux o módulo precisa ser carregado e neste exemplo iremos usar um cliente via Terminal.
