@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Protocolo OSPF - Formação de Vizinhança"
+date:   2020-09-01 22:03:36 +0530
+categories: OSPF Redes Cisco Linux
+---
+
+---
+O protocolo OSPF (*Open Shortest Path First*) é um protocolo de roteamento de redes e foi desenvolvimento pelo IETF (Enginnering Task Force), trabalha trabalha diretamente sobre o IP com protocolo número 89. É um protocolo aberto sendo suportado pela maioria dos fabricantes e também por sistemas operacionais Linux, BSD's e Unix e usa o algoritmo de Dijkstra para determinar o melhor caminho para cada rede.
+
+---
+
