@@ -26,7 +26,7 @@ Tipos de memórias memórias:
 
 **Flash**: É usada para armazenar o IOS e outros arquivos, podemos comparar aos HDs ou SSDs dos computadores.
 
-### Comandos
+## Comandos
 
 **show file system:** comando usado para mostrar o sistema de arquivos da caixa além de informações da nvram,flash e sua capacidade de armazenamento.
 
