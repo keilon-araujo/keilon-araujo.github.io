@@ -30,7 +30,7 @@ Tipos de memórias memórias:
 
 **show file system:** comando usado para mostrar o sistema de arquivos da caixa além de informações da nvram,flash e sua capacidade de armazenamento.
 
-No exemplo abaixo o asterisco (*) nos mostra qual unidade de armazenamento padrão, que é *usbflash0* e tem aproximadamente 256mb, a *nvram* possui armazenamento de 255k além de uma unidade removível usb que foi inserida e tem aproximadamente 3.5gb.
+No exemplo abaixo o asterisco ( * ) nos mostra qual unidade de armazenamento padrão, que é *usbflash0* e tem aproximadamente 256mb, a *nvram* possui armazenamento de 255k além de uma unidade removível usb que foi inserida e tem aproximadamente 3.5gb.
 
 As Flags *ro, rw e wo* descrevem as permissões para o sistema de arquivos.
 
